@@ -13,7 +13,17 @@
     document.getElementById(id).value = value;
   }
   function _displayMessage(msg) {
-    document.getElementById('message').innerHTML = msg;
+    const message = document.getElementById('message');
+    $(message)
+      .removeClass('d-none');
+    message.innerHTML = msg;
+
+    setTimeout(() => {
+      $(message)
+        .fadeOut(25e2, function _complete() {
+          $(this).prop('style', false).addClass('d-none');
+        });
+    }, 4e3);
   }
   function _displayError(error) {
     document.getElementById('error').innerHTML = JSON.stringify(error);
