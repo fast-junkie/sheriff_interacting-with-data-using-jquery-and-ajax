@@ -7,7 +7,7 @@ const productModel = new Schema({
   color: { type: String },
   standardCost: { type: String },
   listPrice: { type: String },
-  sellStartDate: { type: String, default: new Date().toLocaleDateString() },
+  sellStartDate: { type: String, default: (new Date()).toISOString() },
   extant: { type: Boolean, default: true },
 });
 
