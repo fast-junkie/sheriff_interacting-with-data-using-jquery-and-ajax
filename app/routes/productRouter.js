@@ -8,11 +8,7 @@ function routes(Product) {
   productRouter
     .route('/products')
     .get(controller.get)
-    .post((req, res) => {
-      const product = new Product(req.body);
-      product.save();
-      return res.status(201).json(product);
-    });
+    .post(controller.post);
 
   productRouter
     .use('/products/:id', (req, res, next) => {

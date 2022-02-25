@@ -16,7 +16,7 @@
     };
   }
   function _setInput(product) {
-    fj.common.setValue('productID', product.productID);
+    fj.common.setValue('productID', product._id);
     fj.common.setValue('name', product.name);
     fj.common.setValue('productNumber', product.productNumber);
     fj.common.setValue('color', product.color);
