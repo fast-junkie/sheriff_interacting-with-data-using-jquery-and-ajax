@@ -5,7 +5,7 @@
   fj.action.insertProduct = _insertProduct;
   fj.action.updateProduct = _updateProduct;
   fj.action.deleteProduct = _deleteProduct;
-  const uri = 'http://enoch.cybertron.local:2112/api/products';
+  const uri = `${fj.config.serverUri}:${fj.config.serverPort}/api/products`;
 
   function _get() {
     const req = new XMLHttpRequest();

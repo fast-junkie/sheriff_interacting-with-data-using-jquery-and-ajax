@@ -5,6 +5,10 @@ x00/
 public/assets/css/
 public/assets/vendor/
 
+# Configurations...
+config*.js
+!config*example.js
+
 # Dev assets...
 node_modules/
 package-lock.json

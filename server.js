@@ -3,20 +3,21 @@ const express = require('express');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const path = require('path');
+const config = require('./app/config');
 const Product = require('./app/models/productModel');
 const productRouter = require('./app/routes/productRouter')(Product);
 
 const appName = 'sheriff_interacting-with-data-using-jquery-and-ajax';
-const port = process.env.PORT || 3e3;
+const port = process.env.PORT || config.serverPort;
 
+debug('Booting... %o', appName);
 mongoose
-  .connect('mongodb://localhost:27017/productsApi', {
+  .connect(`${config.mongoUri}:${config.mongoPort}/${config.mongoDb}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
-const app = express();
 
-debug('Booting... %o', appName);
+const app = express();
 app.use(logger('dev'));
 
 // Base...
