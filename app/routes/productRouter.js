@@ -39,6 +39,7 @@ function routes(Product) {
       product.color = req.body.color;
       product.standardCost = req.body.standardCost;
       product.listPrice = req.body.listPrice;
+      product.sellStartDate = req.body.sellStartDate;
       product.extant = req.body.extant;
       req
         .product
