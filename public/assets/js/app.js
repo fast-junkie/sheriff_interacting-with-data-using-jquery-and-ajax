@@ -7,6 +7,7 @@
       window.console.debug(msg, obj);
     },
   };
+
   const interval = setInterval(init, 1e2);
   function init() {
     if (document.readyState === 'complete') {

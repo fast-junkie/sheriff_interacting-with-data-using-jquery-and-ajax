@@ -27,9 +27,21 @@ function productsController(Product) {
       res.status(400);
       return res.send('Product name is required...');
     }
-    product.save();
-    res.status(201);
-    return res.json(product);
+    if (!req.body.productNumber) {
+      res.status(400);
+      return res.send('Product number is required...');
+    }
+    Product
+      .findOne({ productNumber: product.productNumber }, (err, item) => {
+        if (item !== null) {
+          res.status(400);
+          return res.send(`Product number [${product.productNumber}] is already in use...`);
+        }
+        product.save();
+        res.status(201);
+        return res.json(product);
+      });
+    return false;
   }
 }
 

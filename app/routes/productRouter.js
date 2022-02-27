@@ -29,16 +29,16 @@ function routes(Product) {
     .route('/products/:id')
     .get((req, res) => res.json(req.product))
     .put((req, res) => {
-      const { product } = req;
-      product.name = req.body.name;
-      product.productNumber = req.body.productNumber;
-      product.color = req.body.color;
-      product.standardCost = req.body.standardCost;
-      product.listPrice = req.body.listPrice;
-      product.sellStartDate = req.body.sellStartDate;
-      product.extant = req.body.extant;
-      req
-        .product
+      const { body, product } = req;
+      product.name = body.name;
+      product.productNumber = body.productNumber;
+      product.color = body.color;
+      product.standardCost = body.standardCost;
+      product.listPrice = body.listPrice;
+      product.sellStartDate = body.sellStartDate;
+      product.extant = body.extant;
+
+      product
         .save((err) => {
           if (err) {
             return res.send(err);

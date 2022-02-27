@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/assets/css/app.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a href="/" class="navbar-brand"><i class="bi bi-house-fill"></i></a>
+      </div>
+    </nav>
+
+    <main class="container my-3 no-back">
+      <h3>Ajax Sample - Node</h3>
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-floating mb-3">
+              <input type="text" id="productID" class="form-control" name="productID" placeholder="Product ID" value="62186d950bca61af89a31947" />
+              <label for="productID">Product ID</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" id="name" class="form-control" name="name" placeholder="Product Name" value="A New Product" />
+              <label for="name">Product Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" id="productNumber" class="form-control" name="productNumber" placeholder="Product Number" value="NEW-999" />
+              <label for="productNumber">Product Number</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" id="color" class="form-control" name="color" placeholder="Color" value="Red" />
+              <label for="color">Color</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating mb-3">
+              <input type="number" id="standardCost" class="form-control" name="standardCost" placeholder="Cost" value="10.00" />
+              <label for="standardCost">Cost</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" id="listPrice" class="form-control" name="listPrice" placeholder="Price" value="25.00" />
+              <label for="listPrice">Price</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" id="sellStartDate" class="form-control" name="sellStartDate" placeholder="Sell Start Date" value="2001-09-11T12:46:56.000Z" />
+              <label for="sellStartDate">Sell Start Date</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="offset-3 col-6">
+            <div id="messages">
+              <div id="message" class="alert alert-info d-none"></div>
+              <div id="error" class="alert alert-danger d-none"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="btn-group my-3 d-flex justify-content-center">
+              <button type="button" class="btn btn-dark opacity-25" onclick="fj.action.get();">
+                Get Products
+              </button>
+              <button type="button" class="btn btn-dark opacity-50" onclick="fj.action.getProduct();">
+                Get a Product
+              </button>
+              <button type="button" class="btn btn-dark opacity-75" onclick="fj.action.insertProduct();">
+                Insert Product
+              </button>
+              <button type="button" class="btn btn-dark opacity-100" onclick="fj.action.updateProduct();">
+                Update Product
+              </button>
+              <button type="button" class="btn btn-warning opacity-100" onclick="fj.action.deleteProduct();">
+                Delete Product
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/ajax-common.js"></script>
+    <script src="/assets/js/product.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

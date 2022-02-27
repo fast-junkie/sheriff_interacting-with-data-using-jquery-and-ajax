@@ -3,6 +3,7 @@ const express = require('express');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const path = require('path');
+
 const config = require('./app/config');
 const Product = require('./app/models/productModel');
 const productRouter = require('./app/routes/productRouter')(Product);

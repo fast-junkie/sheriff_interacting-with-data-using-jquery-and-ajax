@@ -11,7 +11,7 @@
     const req = new XMLHttpRequest();
     req.onreadystatechange = function _onReadyStateChange() {
       if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-        console.debug('this.response', this.response);
+        fj.app.debug('this.response', JSON.parse(this.response));
         fj.common.displayMessage('Products Retrieved');
       }
     };

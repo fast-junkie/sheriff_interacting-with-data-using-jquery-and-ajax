@@ -1,36 +1,35 @@
 ((fj) => {
-  fj.product = {};
-  fj.product.getFromInput = _getFromInput;
-  fj.product.setInput = _setInput;
-  fj.product.clearInput = _clearInput;
+  const { getValue, setValue } = fj.common;
 
-  function _getFromInput() {
-    return {
-      productID: fj.common.getValue('productID'),
-      name: fj.common.getValue('name'),
-      productNumber: fj.common.getValue('productNumber'),
-      color: fj.common.getValue('color'),
-      standardCost: fj.common.getValue('standardCost'),
-      listPrice: fj.common.getValue('listPrice'),
-      sellStartDate: new Date(fj.common.getValue('sellStartDate')),
-    };
-  }
-  function _setInput(product) {
-    fj.common.setValue('productID', product._id);
-    fj.common.setValue('name', product.name);
-    fj.common.setValue('productNumber', product.productNumber);
-    fj.common.setValue('color', product.color);
-    fj.common.setValue('standardCost', product.standardCost);
-    fj.common.setValue('listPrice', product.listPrice);
-    fj.common.setValue('sellStartDate', product.sellStartDate);
-  }
-  function _clearInput() {
-    fj.common.setValue('productID', '0');
-    fj.common.setValue('name', '');
-    fj.common.setValue('productNumber', '');
-    fj.common.setValue('color', '');
-    fj.common.setValue('standardCost', '0');
-    fj.common.setValue('listPrice', '0');
-    fj.common.setValue('sellStartDate', new Date().toLocaleDateString());
-  }
+  fj.product = {
+    getFromInput() {
+      return {
+        productID: getValue('productID'),
+        name: getValue('name'),
+        productNumber: getValue('productNumber'),
+        color: getValue('color'),
+        standardCost: getValue('standardCost'),
+        listPrice: getValue('listPrice'),
+        sellStartDate: (new Date(getValue('sellStartDate')).toISOString()),
+      };
+    },
+    setInput(product) {
+      setValue('productID', product._id);
+      setValue('name', product.name);
+      setValue('productNumber', product.productNumber);
+      setValue('color', product.color);
+      setValue('standardCost', product.standardCost);
+      setValue('listPrice', product.listPrice);
+      setValue('sellStartDate', product.sellStartDate);
+    },
+    clearInput() {
+      setValue('productID', '0');
+      setValue('name', '');
+      setValue('productNumber', '');
+      setValue('color', '');
+      setValue('standardCost', '0');
+      setValue('listPrice', '0');
+      setValue('sellStartDate', (new Date()).toISOString());
+    },
+  };
 })(window.fj || (window.fj = {}));
