@@ -1,3 +1,4 @@
+const debug = require('debug')('jquery:productRouter');
 const express = require('express');
 const productsController = require('../controllers/productsController');
 
@@ -14,6 +15,7 @@ function routes(Product) {
     .use('/products/:id', (req, res, next) => {
       Product
         .findById(req.params.id, (err, product) => {
+          debug('req.params.id', req.params.id);
           if (err) {
             return res.send(err);
           }
@@ -30,6 +32,7 @@ function routes(Product) {
     .get((req, res) => res.json(req.product))
     .put((req, res) => {
       const { body, product } = req;
+      debug('put: body', body);
       product.name = body.name;
       product.productNumber = body.productNumber;
       product.color = body.color;
@@ -47,12 +50,13 @@ function routes(Product) {
         });
     })
     .patch((req, res) => {
-      const { product } = req;
-      if (req.body._id) {
-        delete req.body._id;
+      const { body, product } = req;
+      debug('patch: body', body);
+      if (body._id) {
+        delete body._id;
       }
       Object
-        .entries(req.body)
+        .entries(body)
         .forEach((item) => {
           const [key, value] = item;
           product[key] = value;
@@ -67,13 +71,14 @@ function routes(Product) {
         });
     })
     .delete((req, res) => {
-      req
-        .product
+      const { product } = req;
+      debug('delete: product', product);
+      product
         .remove((err) => {
           if (err) {
             return res.send(err);
           }
-          return res.sendStatus(204);
+          return res.json({ status: 204, statusText: 'Product deleted...' });
         });
     });
 

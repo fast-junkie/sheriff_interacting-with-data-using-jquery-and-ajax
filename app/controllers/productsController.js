@@ -1,3 +1,5 @@
+const debug = require('debug')('jquery:productsController');
+
 function productsController(Product) {
   return { get, post };
 
@@ -6,6 +8,7 @@ function productsController(Product) {
     if (req.query.color) {
       query.color = req.query.color;
     }
+    debug('get: query', query);
     Product
       .find(query, (err, products) => {
         if (err) {
@@ -22,12 +25,15 @@ function productsController(Product) {
       });
   }
   function post(req, res) {
-    const product = new Product(req.body);
-    if (!req.body.name) {
+    const { body } = req;
+    debug('post: body', body);
+
+    const product = new Product(body);
+    if (!body.name) {
       res.status(400);
       return res.send('Product name is required...');
     }
-    if (!req.body.productNumber) {
+    if (!body.productNumber) {
       res.status(400);
       return res.send('Product number is required...');
     }

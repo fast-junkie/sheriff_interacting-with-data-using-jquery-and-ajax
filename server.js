@@ -32,8 +32,8 @@ app.use('/api', productRouter);
 // Export
 if (require.main === module) {
   app.listen(port, () => {
-    console.debug('Start: %s', new Date());
-    console.debug(' Port: %d', port);
+    debug('Start: %s', new Date());
+    debug(' Port: %d', port);
   });
 } else {
   module.exports = app;
