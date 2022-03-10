@@ -6,7 +6,7 @@
   "version": "0.6.5",
   "main": "server.js",
   "scripts": {
-    "copy:vendor": "cpx \"node_modules/{bootstrap/dist,bootstrap-icons/font,jquery/dist}/**/*\" public/assets/vendor -C",
+    "copy:vendor": "cpx \"node_modules/{bootstrap/dist,bootstrap-icons/font,jquery/dist,jquery-validation/dist}/**/*\" public/assets/vendor -C",
     "scss:app": "sass public/assets/sass/app.scss public/assets/css/app.css",
     
     "build:css": "npm run scss:app",
@@ -21,6 +21,7 @@
     "debug": "4.3.3",
     "express": "4.17.3",
     "jquery": "3.6.0",
+    "jquery-validation": "1.19.3",
     "mongoose": "6.2.3",
     "morgan": "1.10.0"
   },

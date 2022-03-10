@@ -18,7 +18,6 @@
       const container = document.getElementById(id);
       $(container).removeClass('d-none');
       container.innerHTML = (id !== 'message') ? JSON.stringify(msg) : msg;
-
       setTimeout(() => {
         $(container)
           .fadeOut(25e2, function _complete() {
@@ -47,12 +46,12 @@
       }
     },
     processResponse(resp) {
-      debug('resp', resp);
+      // debug('resp', resp);
       fj.common.lastStatus.status = resp.status;
       fj.common.lastStatus.statusText = resp.statusText;
       fj.common.lastStatus.ok = resp.ok;
 
-      debug('lastStatus', fj.common.lastStatus);
+      // debug('lastStatus', fj.common.lastStatus);
       if (fj.common.lastStatus.ok) {
         return resp.json() ?? 'No response JSON...';
       }

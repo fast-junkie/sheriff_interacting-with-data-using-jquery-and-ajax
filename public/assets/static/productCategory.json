@@ -1,1 +1,166 @@
-{}
+[
+  {
+    "productCategoryID": 4,
+    "name": "Accessories"
+  },
+  {
+    "productCategoryID": 22,
+    "name": "Bib-Shorts"
+  },
+  {
+    "productCategoryID": 30,
+    "name": "Bike Racks"
+  },
+  {
+    "productCategoryID": 31,
+    "name": "Bike Stands"
+  },
+  {
+    "productCategoryID": 1,
+    "name": "Bikes"
+  },
+  {
+    "productCategoryID": 32,
+    "name": "Bottles and Cages"
+  },
+  {
+    "productCategoryID": 9,
+    "name": "Bottom Brackets"
+  },
+  {
+    "productCategoryID": 10,
+    "name": "Brakes"
+  },
+  {
+    "productCategoryID": 23,
+    "name": "Caps"
+  },
+  {
+    "productCategoryID": 11,
+    "name": "Chains"
+  },
+  {
+    "productCategoryID": 33,
+    "name": "Cleaners"
+  },
+  {
+    "productCategoryID": 3,
+    "name": "Clothing"
+  },
+  {
+    "productCategoryID": 2,
+    "name": "Components22"
+  },
+  {
+    "productCategoryID": 12,
+    "name": "Cranksets"
+  },
+  {
+    "productCategoryID": 13,
+    "name": "Derailleurs"
+  },
+  {
+    "productCategoryID": 34,
+    "name": "Fenders"
+  },
+  {
+    "productCategoryID": 14,
+    "name": "Forks"
+  },
+  {
+    "productCategoryID": 24,
+    "name": "Gloves"
+  },
+  {
+    "productCategoryID": 8,
+    "name": "Handlebars"
+  },
+  {
+    "productCategoryID": 15,
+    "name": "Headsets"
+  },
+  {
+    "productCategoryID": 35,
+    "name": "Helmets"
+  },
+  {
+    "productCategoryID": 36,
+    "name": "Hydration Packs"
+  },
+  {
+    "productCategoryID": 25,
+    "name": "Jerseys"
+  },
+  {
+    "productCategoryID": 37,
+    "name": "Lights"
+  },
+  {
+    "productCategoryID": 38,
+    "name": "Locks"
+  },
+  {
+    "productCategoryID": 5,
+    "name": "Mountain Bikes"
+  },
+  {
+    "productCategoryID": 16,
+    "name": "Mountain Frames"
+  },
+  {
+    "productCategoryID": 39,
+    "name": "Panniers"
+  },
+  {
+    "productCategoryID": 17,
+    "name": "Pedals"
+  },
+  {
+    "productCategoryID": 40,
+    "name": "Pumps"
+  },
+  {
+    "productCategoryID": 6,
+    "name": "Road Bikes"
+  },
+  {
+    "productCategoryID": 18,
+    "name": "Road Frames"
+  },
+  {
+    "productCategoryID": 19,
+    "name": "Saddles"
+  },
+  {
+    "productCategoryID": 26,
+    "name": "Shorts"
+  },
+  {
+    "productCategoryID": 27,
+    "name": "Socks"
+  },
+  {
+    "productCategoryID": 28,
+    "name": "Tights"
+  },
+  {
+    "productCategoryID": 41,
+    "name": "Tires and Tubes"
+  },
+  {
+    "productCategoryID": 7,
+    "name": "Touring Bikes"
+  },
+  {
+    "productCategoryID": 20,
+    "name": "Touring Frames"
+  },
+  {
+    "productCategoryID": 29,
+    "name": "Vests"
+  },
+  {
+    "productCategoryID": 21,
+    "name": "Wheels"
+  }
+]

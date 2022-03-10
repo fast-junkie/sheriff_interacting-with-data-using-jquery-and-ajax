@@ -14,4 +14,5 @@ ___
 
 ### Summary
 ---
-:skull:
+:skull: I did not use Mr. Sheriff's `.NET 5` WebAPI... I wrote a dirty `mongodb` `mongoose` API to get the base of the work done. For absolutley no particular reason...  
+:skull: I ran through Modules 7 and 8... but did not do the additional API features... I just looked and listened.
